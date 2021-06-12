@@ -6,73 +6,30 @@
     <thead class="table-dark">
         <tr>
             <td>#</td>
-            <td>Nama Guru</td>
-            <td>NIP</td>
+            <td>Kamar</td>
+            <td>Nama Pasien</td>
+            <td>Alamat</td>
+            <td>Dokter</td>
+            <td>Bidang Dokter</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($studentselect as $studsel)
+        @foreach($datas as $data)
         <tr>
             <td>{{ $loop->iteration}}</td>
-            <td>{{ $studsel->nama_guru}}</td>
-            <td>{{ $studsel->nip}}</td>
+            <td>{{$data->kamar_id}}</td>
+            <td>{{$data->pasien_nama}}</td>
+            <td>{{$data->alamat}}</td>
+            <td>{{$data->dokter_nama}}</td>
+            <td>{{$data->jabatan}}</td>
         </tr>
         @endforeach
     </tbody>
 </table>
-<h5>Where Nama Guru Budi Setiawan</h5>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <td>#</td>
-            <td>Nama Guru</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($studentw as $studw)
-        <tr>
-            <td>{{ $loop->iteration}}</td>
-            <td>{{ $studw->nama_guru}}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
-<h5>Join Guru and Siswa with Wali Kelas</h5>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <td>#</td>
-            <td>Nama Siswa</td>
-            <td>Wali Kelas</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($studentjoin as $studj)
-        <tr>
-            <td>{{ $loop->iteration}}</td>
-            <td>{{ $studj->nama_siswa}}</td>
-            <td>{{ $studj->nama_guru}}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
-<h5>Join Guru and Siswa Budi Setiawan</h5>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <td>#</td>
-            <td>Nama Siswa</td>
-            <td>Nama Guru</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($studentjoinlike as $studjl)
-        <tr>
-            <td>{{ $loop->iteration}}</td>
-            <td>{{ $studjl->nama_siswa}}</td>
-            <td>{{ $studjl->nama_guru}}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+<form action="" method="post">
+    <div class="mb-3">
+        <label for="formFileSm" class="form-label">File Input</label>
+        <input class="form-control " id="formFileSm" type="file">
+    </div>
+</form>
 @endsection

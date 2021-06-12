@@ -26,16 +26,6 @@
                 <a class="nav-link" href="{{url('/home')}}">
                     <span>Home</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{url('/artikel')}}">
-                    <span>Artikel</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{url('/contact')}}">
-                    <span>Contact Us</span>
-                </a>
-            </li>
         </ul>
         <!-- End of Sidebar -->
 
