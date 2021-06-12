@@ -15,3 +15,4 @@ use App\Http\Controllers\WebController;
 */
 
 Route::get('/', [WebController::class, 'index']);
+Route::post('/', [WebController::class, 'import']);

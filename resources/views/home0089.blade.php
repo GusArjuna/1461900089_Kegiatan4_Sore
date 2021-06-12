@@ -26,10 +26,12 @@
         @endforeach
     </tbody>
 </table>
-<form action="" method="post">
+<form action="{{url('/')}}" method="post" enctype="multipart/form-data">
+    @csrf
     <div class="mb-3">
         <label for="formFileSm" class="form-label">File Input</label>
-        <input class="form-control " id="formFileSm" type="file">
+        <input class="form-control " id="formFileSm" type="file" name="file">
     </div>
+    <button type="submit">Submit</button>
 </form>
 @endsection

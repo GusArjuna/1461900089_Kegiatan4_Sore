@@ -15,9 +15,9 @@ class WebController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function import()
+    public function import(Request $request)
     {
-        Excel::import(new PraktikumImport, 'users.xlsx');
+        Excel::import(new PraktikumImport, $request->file('file'));
 
         return redirect('/')->with('success', 'All good!');
     }
